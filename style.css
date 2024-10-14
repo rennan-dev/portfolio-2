@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Text Started */
+.retro-text {
+    font-family: 'Press Start 2P', cursive; 
+    color: #00ff00; 
+    text-shadow: 2px 2px #000000; 
+    background-color: black; 
+    padding: 10px;
+    border: 3px solid #00ff00;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto; 
+    font-size: 24px;
+    position: relative; 
+    z-index: 10;
+}
+
+.retro-text-2 {
+    font-family: 'Press Start 2P', cursive; 
+    color: #00ff00; 
+    text-shadow: 2px 2px #000000; 
+    background-color: black; 
+    padding: 10px;
+    border: 3px solid #00ff00;
+    text-align: center;
+    width: 40%;
+    margin: 20px auto; 
+    font-size: 24px;
+    position: relative; 
+    z-index: 10;
+}
+
+h2 {
+    color: white;
+}
+/* Text Ended */
+
+/* Portrait Started */
+.section-1 {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    min-height: 100vh; 
+    visibility: visible; 
+    padding-bottom: 40px; 
+}
+
+.profile-container {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 20px;
+    justify-content: flex-start; 
+    position: relative; 
+}
+
+.portrait {
+    width: 60%; 
+    max-width: 400px; 
+    height: 400px; 
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.profile-text {
+    font-family: 'Press Start 2P', cursive; 
+    color: #00ff00; 
+    font-size: 18px; 
+    text-align: left;
+    max-width: 400px; 
+    margin: 0; 
+}
+
+.portrait:hover .hover {
+    opacity: 0.4;
+    transition: opacity 380ms cubic-bezier(.16, .01, .77, 1);
+}
+
+.portrait:hover .hover-img {
+    transform: translate(var(--translate-x), var(--translate-y));
+    transition: opacity 320ms cubic-bezier(.16, .01, .77, 1), transform 320ms cubic-bezier(.16, .01, .77, 1);
+}
+
+.fill {
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.hover {
+    opacity: 0;
+    transition: all 380ms cubic-bezier(.16, .01, .77, 1);
+}
+
+.hover-img {
+    transition: opacity 320ms cubic-bezier(.16, .01, .77, 1), transform 320ms cubic-bezier(.16, .01, .77, 1);
+    position: relative; 
+    width: 100%; 
+    height: 100%;
+}
+
+.hover-img:after {
+    content: '';
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00ff00;
+    mix-blend-mode: color;
+}
+
+.cover-img {
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-image: url('./images/retrato.png');
+}
+/* Portrait Ended */
+
+/* Skills Started */
+.section-2 {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+}
+
+
+.habilidades-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin-top: 10px;
+    width: 40%;
+}
+
+
+.habilidade {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px; 
+    text-align: center; 
+    width: 100px; 
+}
+
+.habilidade-img {
+    width: 100px; 
+    height: 100px; 
+    overflow: hidden; 
+    border-radius: 50%; 
+    border: 3px solid #00ff00; 
+}
+
+.habilidade-img img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+/* Skills Ended */
+
+/* Background Started */
+.container-bubble {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #000;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* Background Ended */
